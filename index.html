@@ -3,474 +3,723 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+
   <!-- Primary Meta Tags -->
-  <!-- TODO: Replace with your paper title and author names -->
-  <meta name="title" content="PAPER_TITLE - AUTHOR_NAMES">
-  <!-- TODO: Write a compelling 150-160 character description of your research -->
-  <meta name="description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Add 5-10 relevant keywords for your research area -->
-  <meta name="keywords" content="KEYWORD1, KEYWORD2, KEYWORD3, machine learning, computer vision, AI">
-  <!-- TODO: List all authors -->
-  <meta name="author" content="FIRST_AUTHOR_NAME, SECOND_AUTHOR_NAME">
+  <meta name="title" content="Thinking on Its Feet: Terrain-Aware Hierarchical Control with Proprioceptive Feedback for Humanoid Navigation">
+  <meta name="description" content="TOIF: A three-tier hierarchical control framework that closes the loop between low-level proprioceptive sensing and high-level semantic path planning for terrain-aware humanoid robot navigation.">
+  <meta name="keywords" content="humanoid robot, navigation, VLA, vision-language-action, proprioception, anomaly detection, terrain adaptation, hierarchical control, IROS 2026">
+  <meta name="author" content="Anonymous Authors">
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
-  
+
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="article">
-  <!-- TODO: Replace with your institution or lab name -->
-  <meta property="og:site_name" content="INSTITUTION_OR_LAB_NAME">
-  <!-- TODO: Same as paper title above -->
-  <meta property="og:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta property="og:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Replace with your actual website URL -->
-  <meta property="og:url" content="https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE">
-  <!-- TODO: Create a 1200x630px preview image and update path -->
-  <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
+  <meta property="og:site_name" content="TOIF Project Page">
+  <meta property="og:title" content="Thinking on Its Feet (TOIF)">
+  <meta property="og:description" content="A three-tier hierarchical control framework that closes the loop between low-level proprioceptive sensing and high-level semantic path planning for terrain-aware humanoid robot navigation.">
+  <!-- TODO: Replace with your actual GitHub Pages URL -->
+  <meta property="og:url" content="https://yuhaiw.github.io/TOIF/">
+  <!-- TODO: Create a 1200x630px preview image -->
+  <meta property="og:image" content="https://yuhaiw.github.io/TOIF/static/images/social_preview.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="PAPER_TITLE - Research Preview">
-  <meta property="article:published_time" content="2024-01-01T00:00:00.000Z">
-  <meta property="article:author" content="FIRST_AUTHOR_NAME">
+  <meta property="og:image:alt" content="TOIF - Terrain-Aware Hierarchical Control for Humanoid Navigation">
+  <meta property="article:published_time" content="2026-01-01T00:00:00.000Z">
   <meta property="article:section" content="Research">
-  <meta property="article:tag" content="KEYWORD1">
-  <meta property="article:tag" content="KEYWORD2">
+  <meta property="article:tag" content="Humanoid Robot">
+  <meta property="article:tag" content="Navigation">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <!-- TODO: Replace with your lab/institution Twitter handle -->
+  <!-- TODO: Replace with your Twitter handle -->
   <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE">
-  <!-- TODO: Replace with first author's Twitter handle -->
-  <meta name="twitter:creator" content="@AUTHOR_TWITTER_HANDLE">
-  <!-- TODO: Same as paper title above -->
-  <meta name="twitter:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta name="twitter:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Same as social preview image above -->
-  <meta name="twitter:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta name="twitter:image:alt" content="PAPER_TITLE - Research Preview">
+  <meta name="twitter:title" content="Thinking on Its Feet (TOIF)">
+  <meta name="twitter:description" content="A three-tier hierarchical control framework that closes the loop between low-level proprioceptive sensing and high-level semantic path planning for terrain-aware humanoid robot navigation.">
+  <meta name="twitter:image" content="https://yuhaiw.github.io/TOIF/static/images/social_preview.png">
 
   <!-- Academic/Research Specific -->
-  <meta name="citation_title" content="PAPER_TITLE">
-  <meta name="citation_author" content="FIRST_AUTHOR_LAST, FIRST_AUTHOR_FIRST">
-  <meta name="citation_author" content="SECOND_AUTHOR_LAST, SECOND_AUTHOR_FIRST">
-  <meta name="citation_publication_date" content="2024">
-  <meta name="citation_conference_title" content="CONFERENCE_NAME">
-  <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf">
-  
+  <meta name="citation_title" content="Thinking on Its Feet: Terrain-Aware Hierarchical Control with Proprioceptive Feedback for Humanoid Navigation">
+  <!-- TODO: Fill in actual author names after review -->
+  <meta name="citation_author" content="Anonymous Authors">
+  <meta name="citation_publication_date" content="2026">
+  <meta name="citation_conference_title" content="IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)">
+  <!-- TODO: Add arXiv PDF link when available -->
+  <!-- <meta name="citation_pdf_url" content="https://arxiv.org/pdf/XXXX.XXXXX.pdf"> -->
+
   <!-- Additional SEO -->
   <meta name="theme-color" content="#2563eb">
   <meta name="msapplication-TileColor" content="#2563eb">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  
+
   <!-- Preconnect for performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://ajax.googleapis.com">
-  <link rel="preconnect" href="https://documentcloud.adobe.com">
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
 
+  <title>Thinking on Its Feet (TOIF) | IROS 2026</title>
 
-  <!-- TODO: Replace with your paper title and authors -->
-  <title>PAPER_TITLE - AUTHOR_NAMES | Academic Research</title>
-  
   <!-- Favicon and App Icons -->
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link rel="apple-touch-icon" href="static/images/favicon.ico">
-  
-  <!-- Critical CSS - Load synchronously -->
+
+  <!-- Critical CSS -->
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
-  
-  <!-- Non-critical CSS - Load asynchronously -->
+
+  <!-- Non-critical CSS -->
   <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  
-  <!-- Fallback for browsers that don't support preload -->
+
   <noscript>
     <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
     <link rel="stylesheet" href="static/css/bulma-slider.min.css">
     <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   </noscript>
-  
-  <!-- Fonts - Optimized loading -->
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- Defer non-critical JavaScript -->
+
   <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
   <script defer src="static/js/fontawesome.all.min.js"></script>
   <script defer src="static/js/bulma-carousel.min.js"></script>
   <script defer src="static/js/bulma-slider.min.js"></script>
   <script defer src="static/js/index.js"></script>
-  
-  <!-- Structured Data for Academic Papers -->
+
+  <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ScholarlyArticle",
-    "headline": "PAPER_TITLE",
-    "description": "BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS",
-    "author": [
-      {
-        "@type": "Person",
-        "name": "FIRST_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
-      },
-      {
-        "@type": "Person",
-        "name": "SECOND_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
-      }
-    ],
-    "datePublished": "2024-01-01",
+    "headline": "Thinking on Its Feet: Terrain-Aware Hierarchical Control with Proprioceptive Feedback for Humanoid Navigation",
+    "description": "TOIF: A three-tier hierarchical control framework that closes the loop between low-level proprioceptive sensing and high-level semantic path planning for terrain-aware humanoid robot navigation.",
+    "datePublished": "2026-01-01",
     "publisher": {
       "@type": "Organization",
-      "name": "CONFERENCE_OR_JOURNAL_NAME"
+      "name": "IROS 2026"
     },
-    "url": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE",
-    "image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
-    "keywords": ["KEYWORD1", "KEYWORD2", "KEYWORD3", "machine learning", "computer vision"],
-    "abstract": "FULL_ABSTRACT_TEXT_HERE",
-    "citation": "BIBTEX_CITATION_HERE",
-    "isAccessibleForFree": true,
-    "license": "https://creativecommons.org/licenses/by/4.0/",
-    "mainEntity": {
-      "@type": "WebPage",
-      "@id": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE"
-    },
-    "about": [
-      {
-        "@type": "Thing",
-        "name": "RESEARCH_AREA_1"
-      },
-      {
-        "@type": "Thing", 
-        "name": "RESEARCH_AREA_2"
-      }
-    ]
+    "keywords": ["humanoid robot", "navigation", "VLA", "proprioception", "anomaly detection", "terrain adaptation", "hierarchical control"],
+    "abstract": "Vision-Language-Action (VLA) models have advanced robotic navigation by unifying perception and planning, yet most systems operate open-loop. We propose Thinking on Its Feet (TOIF), a three-tier hierarchical control framework that closes the loop between low-level proprioceptive sensing and high-level semantic path planning for terrain-aware humanoid robot navigation.",
+    "isAccessibleForFree": true
   }
   </script>
-  
-  <!-- Website/Organization Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "INSTITUTION_OR_LAB_NAME",
-    "url": "https://YOUR_INSTITUTION_WEBSITE.com",
-    "logo": "https://YOUR_DOMAIN.com/static/images/favicon.ico",
-    "sameAs": [
-      "https://twitter.com/YOUR_TWITTER_HANDLE",
-      "https://github.com/YOUR_GITHUB_USERNAME"
-    ]
-  }
-  </script>
+
+  <style>
+    /* Teaser image caption */
+    .teaser-caption {
+      font-size: 0.95rem;
+      color: #4a5568;
+      line-height: 1.6;
+      margin-top: 1rem;
+      text-align: left;
+    }
+    /* Contribution list */
+    .contributions-list {
+      text-align: left;
+    }
+    .contributions-list li {
+      margin-bottom: 0.75rem;
+      line-height: 1.6;
+    }
+    /* Results table */
+    .results-table {
+      font-size: 0.9rem;
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+    .results-table th {
+      background: #f0f4ff;
+      padding: 0.5rem 0.75rem;
+      border-bottom: 2px solid #c3d0ee;
+      text-align: center;
+      font-weight: 600;
+    }
+    .results-table td {
+      padding: 0.45rem 0.75rem;
+      border-bottom: 1px solid #e2e8f0;
+      text-align: center;
+    }
+    .results-table td:first-child, .results-table td:nth-child(2) {
+      text-align: left;
+    }
+    .results-table tr.ours td {
+      font-weight: 700;
+      background: #f0f9ff;
+    }
+    .results-table .scenario-header td {
+      background: #f8fafc;
+      font-style: italic;
+      font-weight: 600;
+      color: #374151;
+    }
+    .table-caption {
+      font-size: 0.85rem;
+      color: #6b7280;
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    /* Section with figure + description side-by-side */
+    .figure-block {
+      margin: 2rem 0;
+    }
+    .figure-block img {
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    }
+    .figure-caption {
+      font-size: 0.88rem;
+      color: #4a5568;
+      margin-top: 0.5rem;
+      line-height: 1.5;
+    }
+  </style>
 </head>
 <body>
-
 
   <!-- Scroll to Top Button -->
   <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
     <i class="fas fa-chevron-up"></i>
   </button>
 
-  <!-- More Works Dropdown -->
-  <div class="more-works-container">
-    <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works from Our Lab">
-      <i class="fas fa-flask"></i>
-      More Works
-      <i class="fas fa-chevron-down dropdown-arrow"></i>
-    </button>
-    <div class="more-works-dropdown" id="moreWorksDropdown">
-      <div class="dropdown-header">
-        <h4>More Works from Our Lab</h4>
-        <button class="close-btn" onclick="toggleMoreWorks()">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
-      <div class="works-list">
-        <!-- TODO: Replace with your lab's related works -->
-        <a href="https://arxiv.org/abs/PAPER_ID_1" class="work-item" target="_blank">
-          <div class="work-info">
-            <!-- TODO: Replace with actual paper title -->
-            <h5>Paper Title 1</h5>
-            <!-- TODO: Replace with brief description -->
-            <p>Brief description of the work and its main contribution.</p>
-            <!-- TODO: Replace with venue and year -->
-            <span class="work-venue">Conference/Journal 2024</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <!-- TODO: Add more related works or remove extra items -->
-        <a href="https://arxiv.org/abs/PAPER_ID_2" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 2</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <a href="https://arxiv.org/abs/PAPER_ID_3" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 3</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-      </div>
-    </div>
-  </div>
-
   <main id="main-content">
+
+  <!-- ===================== HERO / TITLE ===================== -->
   <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <!-- TODO: Replace with your paper title -->
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+
+            <h1 class="title is-1 publication-title">
+              Thinking on Its Feet: Terrain-Aware Hierarchical Control with Proprioceptive Feedback for Humanoid Navigation
+            </h1>
+
             <div class="is-size-5 publication-authors">
-              <!-- TODO: Replace with your paper authors and their personal links -->
+              <!-- TODO: Replace with actual author names and links after review period -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
-                <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
-                  </span>
-                  </div>
+                <a href="#" target="_blank">First Author</a><sup>*</sup>,</span>
+              <span class="author-block">
+                <a href="#" target="_blank">Second Author</a><sup>*</sup>,</span>
+              <span class="author-block">
+                <a href="#" target="_blank">Third Author</a>
+              </span>
+            </div>
 
-                  <div class="is-size-5 publication-authors">
-                    <!-- TODO: Replace with your institution and conference/journal info -->
-                    <span class="author-block">Institution Name<br>Conference name and year</span>
-                    <!-- TODO: Remove this line if no equal contribution -->
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-                  </div>
+            <div class="is-size-5 publication-authors">
+              <!-- TODO: Replace with actual institution name after review -->
+              <span class="author-block">Institution Name<br>
+                IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2026)
+              </span>
+              <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+            </div>
 
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- TODO: Update with your arXiv paper ID -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
+            <div class="column has-text-centered">
+              <div class="publication-links">
 
-                    <!-- TODO: Add your supplementary material PDF or remove this section -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
+                <!-- Paper PDF — TODO: add arXiv ID when available -->
+                <span class="link-block">
+                  <a href="#" target="_blank"
+                     class="external-link button is-normal is-rounded is-dark"
+                     title="Coming soon">
+                    <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                    <span>Paper</span>
+                  </a>
+                </span>
 
-                  <!-- TODO: Replace with your GitHub repository URL -->
-                  <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
+                <!-- arXiv — TODO: add arXiv ID when available -->
+                <span class="link-block">
+                  <a href="#" target="_blank"
+                     class="external-link button is-normal is-rounded is-dark"
+                     title="Coming soon">
+                    <span class="icon"><i class="ai ai-arxiv"></i></span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+
+                <!-- GitHub Code — TODO: replace with your code repo URL -->
+                <span class="link-block">
+                  <a href="https://github.com/YuhaiW/TOIF" target="_blank"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fab fa-github"></i></span>
                     <span>Code</span>
                   </a>
                 </span>
 
-                <!-- TODO: Update with your arXiv paper ID -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
+              </div>
             </div>
+
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <!-- TODO: Replace with your teaser video -->
-      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <!-- TODO: Add your video file path here -->
-        <source src="static/videos/banner_video.mp4" type="video/mp4">
-      </video>
-      <!-- TODO: Replace with your video description -->
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
-
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <!-- TODO: Replace with your paper abstract -->
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End paper abstract -->
-
-
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- TODO: Replace with your research result images -->
-        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
-        <!-- TODO: Replace with description of this result -->
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
-
-
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- TODO: Replace with your YouTube video ID -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End youtube video -->
-
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <!-- TODO: Replace with your poster PDF -->
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
       </div>
     </div>
   </section>
-<!--End paper poster -->
+  <!-- ===================== END HERO ===================== -->
 
 
+  <!-- ===================== TEASER IMAGE ===================== -->
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <!-- TODO: Place fig/Motivation.png in static/images/motivation.png -->
+        <img src="static/images/motivation.png"
+             alt="Motivation figure: TOIF closes the open-loop VLA navigation gap using proprioceptive feedback"
+             style="width:100%; border-radius:8px; box-shadow:0 2px 12px rgba(0,0,0,0.12);">
+        <p class="teaser-caption" style="margin-top:1rem;">
+          <strong>Figure 1.</strong>
+          Motivation of our approach.
+          <strong>(a)</strong> Open-loop VLA navigation commits to a fixed plan and fails upon encountering challenging terrain.
+          <strong>(b)</strong> TOIF closes this loop by:
+          (1)&nbsp;detecting terrain anomalies via proprioceptive sensing, triggering replanning to an alternative route, and modulating velocity to reduce risk;
+          (2)&nbsp;validating the approach on a physical Unitree&nbsp;G1 with reliable anomaly detection across uneven, stepped, and slippery terrains.
+          Green/red borders indicate normal traversal and detected anomalies, respectively.
+        </p>
+      </div>
+    </div>
+  </section>
+  <!-- ===================== END TEASER ===================== -->
 
-<!--BibTex citation -->
+
+  <!-- ===================== ABSTRACT ===================== -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Vision-Language-Action (VLA) models have advanced robotic navigation by unifying perception and planning,
+              yet most systems operate <em>open-loop</em>&mdash;generating plans without awareness and adaptivity to
+              locomotion feasibility and safety. This disconnect leads to cascading failures on challenging terrains and
+              surfaces where pre-planned trajectories become infeasible. We propose <strong>Thinking on Its Feet
+              (TOIF)</strong>, a three-tier hierarchical control framework that closes the loop between low-level
+              proprioceptive sensing and high-level semantic path planning for terrain-aware humanoid robot navigation.
+            </p>
+            <p>
+              At the low level, an RL locomotion policy is augmented with a multi-detector anomaly system that evaluates
+              terrain-specific feasibility and safety constraints using compact proprioceptive features. Detected anomalies
+              are accumulated through leaky integrators and translated into structured natural-language feedback, enabling
+              the high-level planner to replan over a semantic scene graph. At the mid level, a vision-language-action
+              model generates velocity commands that bridge high-level waypoints and low-level execution. We further
+              introduce <strong>risk-aware velocity modulation</strong> that proactively reduces speed based on real-time
+              anomaly confidence.
+            </p>
+            <p>
+              We validate TOIF in Isaac Lab simulation and on a physical Unitree&nbsp;G1 humanoid robot across several
+              unsafe or challenging terrains. Results demonstrate that TOIF significantly improves navigation success rate
+              and safety over open-loop baselines, and that the proprioceptive anomaly detectors transfer effectively to
+              real-world deployment.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ===================== END ABSTRACT ===================== -->
+
+
+  <!-- ===================== SYSTEM OVERVIEW ===================== -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">System Overview</h2>
+      <div class="content">
+        <!-- TODO: Place fig/system.png in static/images/system.png -->
+        <div class="figure-block has-text-centered">
+          <img src="static/images/system.png"
+               alt="TOIF system architecture diagram"
+               style="max-width:90%; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.10);">
+          <p class="figure-caption" style="margin-top:0.75rem;">
+            <strong>Figure 2.</strong>
+            TOIF system architecture. Commands flow downward through scene-graph planning, VLA navigation, and RL locomotion.
+            Proprioceptive feedback flows upward through anomaly detection, leaky integration, and semantic translation,
+            enabling the planner to replan with terrain-aware context.
+          </p>
+        </div>
+
+        <p>
+          TOIF operates as a <strong>three-tier cascade</strong>:
+        </p>
+        <ul>
+          <li>
+            <strong>High level&nbsp;(on-demand):</strong> An LLM planner receives a semantic scene graph and navigation
+            task, producing waypoints with natural-language instructions. When proprioceptive feedback triggers a replan,
+            the blocked edge is added to a persistent list and the LLM selects an alternative route.
+          </li>
+          <li>
+            <strong>Mid level&nbsp;(~1&nbsp;Hz):</strong> A VLA model (NaVILA) converts the current instruction and
+            egocentric image sequence into metric velocity commands <em>(v<sub>x</sub>, v<sub>y</sub>, &omega;)</em>.
+            Risk-aware velocity modulation continuously scales speed based on real-time anomaly confidence.
+          </li>
+          <li>
+            <strong>Low level&nbsp;(50&nbsp;Hz):</strong> A PPO-trained RL locomotion policy executes joint-position
+            targets on the Unitree&nbsp;G1 (29&nbsp;DoF). A multi-detector anomaly system monitors proprioceptive
+            signals and accumulates evidence through terrain-specific leaky integrators to filter transient noise.
+          </li>
+        </ul>
+
+        <h3 class="title is-5" style="margin-top:1.5rem;">Key Contributions</h3>
+        <ol class="contributions-list">
+          <li>
+            A <strong>three-tier hierarchical architecture with bidirectional information flow</strong> that couples
+            downward command propagation with upward proprioceptive feedback via natural-language terrain context.
+          </li>
+          <li>
+            A <strong>risk-aware terrain adaptation mechanism</strong> combining sigmoid-based velocity modulation with
+            leaky-integrator replan triggers using terrain-specific time constants to balance responsiveness against
+            false-positive suppression.
+          </li>
+          <li>
+            A <strong>multidetector proprioceptive anomaly system</strong> that learns compact, task-specific feature
+            subsets for each terrain type (slippery, uneven, stepped), validated both in Isaac Lab simulation and on a
+            real Unitree&nbsp;G1 with different sensor configurations.
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+  <!-- ===================== END SYSTEM OVERVIEW ===================== -->
+
+
+  <!-- ===================== RESULTS ===================== -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Results</h2>
+      <div class="content">
+
+        <!-- Navigation Performance Table -->
+        <h3 class="title is-5">Navigation Performance</h3>
+        <p>
+          We evaluate over 20 trials per condition on two scenarios:
+          <strong>S1&nbsp;Warehouse&nbsp;Exit</strong> (detection-triggered semantic rerouting around a blocked doorway)
+          and <strong>S2&nbsp;Rocky&nbsp;Beach</strong> (continuous terrain adaptation on 18&nbsp;m of uneven coastal terrain).
+        </p>
+
+        <div style="overflow-x:auto;">
+          <table class="results-table">
+            <thead>
+              <tr>
+                <th>Scenario</th>
+                <th>Method</th>
+                <th>SR (%) &uarr;</th>
+                <th>Time (s) &darr;</th>
+                <th>Falls &darr;</th>
+                <th>Replans</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="scenario-header">
+                <td colspan="6">S1: Warehouse Exit (T-Corridor)</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>RRT* + Heuristic</td>
+                <td>40</td>
+                <td>71.77 &pm; 12.98</td>
+                <td>0.5 &pm; 0.6</td>
+                <td>&mdash;</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>RRT* + DWA</td>
+                <td>45</td>
+                <td>26.73 &pm; 8.58</td>
+                <td>0.0 &pm; 0.0</td>
+                <td>&mdash;</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>NaVILA E2E</td>
+                <td>40</td>
+                <td>49.04 &pm; 7.17</td>
+                <td>0.2 &pm; 0.4</td>
+                <td>&mdash;</td>
+              </tr>
+              <tr class="ours">
+                <td></td>
+                <td>TOIF (Ours)</td>
+                <td><strong>65</strong></td>
+                <td>37.34 &pm; 12.10</td>
+                <td><strong>0.0 &pm; 0.0</strong></td>
+                <td>0.80 &pm; 0.40</td>
+              </tr>
+              <tr class="scenario-header">
+                <td colspan="6">S2: Rocky Beach (Mixed Terrain)</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>RRT* + Heuristic</td>
+                <td>20</td>
+                <td>42.88 &pm; 12.76</td>
+                <td>0.8 &pm; 0.4</td>
+                <td>&mdash;</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>RRT* + DWA</td>
+                <td>35</td>
+                <td>35.70 &pm; 2.08</td>
+                <td>0.60 &pm; 0.52</td>
+                <td>&mdash;</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>NaVILA E2E</td>
+                <td>35</td>
+                <td>68.09 &pm; 10.20</td>
+                <td>0.65 &pm; 0.49</td>
+                <td>&mdash;</td>
+              </tr>
+              <tr class="ours">
+                <td></td>
+                <td>TOIF (Ours)</td>
+                <td><strong>60</strong></td>
+                <td>84.81 &pm; 16.63</td>
+                <td><strong>0.40 &pm; 0.52</strong></td>
+                <td>0.50 &pm; 0.53</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="table-caption">
+            Table 1. Navigation performance comparison (20 trials per condition, mean &pm; std). Best results in <strong>bold</strong>.
+          </p>
+        </div>
+
+        <!-- Ablation Table -->
+        <h3 class="title is-5" style="margin-top:2rem;">Ablation Study</h3>
+        <p>
+          Each ablated variant removes exactly one layer of the hierarchical architecture.
+        </p>
+        <div style="overflow-x:auto;">
+          <table class="results-table">
+            <thead>
+              <tr>
+                <th>Scenario</th>
+                <th>Variant</th>
+                <th>SR (%) &uarr;</th>
+                <th>Time (s) &darr;</th>
+                <th>Falls &darr;</th>
+                <th>Replans</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="scenario-header">
+                <td colspan="6">S1: Warehouse Exit (T-Corridor)</td>
+              </tr>
+              <tr class="ours">
+                <td></td>
+                <td>TOIF (Full)</td>
+                <td><strong>65</strong></td>
+                <td>37.0 &pm; 12.0</td>
+                <td><strong>0.0 &pm; 0.0</strong></td>
+                <td>0.8 &pm; 0.4</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>w/o Velocity Modulation</td>
+                <td>50</td>
+                <td>39.0 &pm; 6.9</td>
+                <td>0.0 &pm; 0.0</td>
+                <td>0.9 &pm; 0.3</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>w/o Anomaly Detection</td>
+                <td>20</td>
+                <td>20.5 &pm; 1.5</td>
+                <td>0.3 &pm; 0.5</td>
+                <td>&mdash;</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>w/o High-Level Planning</td>
+                <td>15</td>
+                <td>44.2 &pm; 9.8</td>
+                <td>0.1 &pm; 0.3</td>
+                <td>&mdash;</td>
+              </tr>
+              <tr class="scenario-header">
+                <td colspan="6">S2: Rocky Beach (Mixed Terrain)</td>
+              </tr>
+              <tr class="ours">
+                <td></td>
+                <td>TOIF (Full)</td>
+                <td><strong>60</strong></td>
+                <td>84.81 &pm; 16.63</td>
+                <td><strong>0.40 &pm; 0.52</strong></td>
+                <td>0.50 &pm; 0.53</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>w/o Velocity Modulation</td>
+                <td>50</td>
+                <td>67.81 &pm; 10.23</td>
+                <td>0.50 &pm; 0.50</td>
+                <td>0.45 &pm; 0.51</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>w/o Anomaly Detection</td>
+                <td>25</td>
+                <td>64.62 &pm; 11.53</td>
+                <td>0.75 &pm; 0.44</td>
+                <td>&mdash;</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>w/o High-Level Planning</td>
+                <td>35</td>
+                <td>63.20 &pm; 8.85</td>
+                <td>0.65 &pm; 0.49</td>
+                <td>&mdash;</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="table-caption">
+            Table 2. Ablation study (20 trials per condition). Each row removes one module from the full system.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- ===================== END RESULTS ===================== -->
+
+
+  <!-- ===================== REAL-WORLD VALIDATION ===================== -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Real-World Validation</h2>
+      <div class="content">
+        <p>
+          We deploy the anomaly detection component on a physical Unitree&nbsp;G1 and evaluate it across three
+          laboratory terrain types: <strong>uneven terrain</strong> (speed bumps), <strong>stepped terrain</strong>
+          (40&nbsp;cm-height toolboxes), and <strong>slippery terrain</strong> (wooden boards inclined at 30&ndash;45&deg;).
+        </p>
+
+        <!-- TODO: Place fig/realworld_temporal.png in static/images/realworld_temporal.png -->
+        <div class="figure-block has-text-centered">
+          <img src="static/images/realworld_temporal.png"
+               alt="Real-world anomaly detection temporal results on Unitree G1"
+               style="max-width:95%; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.10);">
+          <p class="figure-caption" style="margin-top:0.75rem;">
+            <strong>Figure 3.</strong>
+            Real-world anomaly detection on a physical Unitree&nbsp;G1 across three terrain types.
+            Each row shows robot snapshots (top) and temporal anomaly scores (bottom).
+            <strong>a:</strong> uneven terrain (&tau;&nbsp;=&nbsp;&minus;0.250).
+            <strong>b:</strong> stepped terrain (&tau;&nbsp;=&nbsp;0.080).
+            <strong>c:</strong> slippery terrain (&tau;&nbsp;=&nbsp;0.040).
+            Bold curves: smoothed scores; light traces: raw output; dashed lines: F1-optimal thresholds.
+          </p>
+        </div>
+
+        <div class="columns" style="margin-top:1.5rem;">
+          <div class="column">
+            <!-- TODO: Place fig/roc_rough_real.png in static/images/roc_rough_real.png -->
+            <div class="figure-block has-text-centered">
+              <img src="static/images/roc_rough_real.png"
+                   alt="ROC curve for real-world uneven terrain anomaly detector"
+                   style="max-width:80%; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.10);">
+              <p class="figure-caption" style="margin-top:0.5rem;">
+                <strong>Figure 4.</strong>
+                ROC curve for the real-world uneven terrain anomaly detector (AdaBoost, AUC&nbsp;=&nbsp;0.874).
+              </p>
+            </div>
+          </div>
+          <div class="column">
+            <table class="results-table">
+              <thead>
+                <tr>
+                  <th>Terrain</th>
+                  <th>Model</th>
+                  <th>Dim</th>
+                  <th>AUC</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Uneven</td>
+                  <td>AdaBoost</td>
+                  <td>4D</td>
+                  <td>0.874</td>
+                </tr>
+                <tr class="ours">
+                  <td>Stepped</td>
+                  <td>XGBoost</td>
+                  <td>1D</td>
+                  <td><strong>0.942</strong></td>
+                </tr>
+                <tr>
+                  <td>Sloped</td>
+                  <td>LOF</td>
+                  <td>4D</td>
+                  <td>0.813</td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="table-caption">Table 3. Real-world anomaly detectors on Unitree&nbsp;G1.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- ===================== END REAL-WORLD ===================== -->
+
+
+  <!-- ===================== IMAGE CAROUSEL ===================== -->
+  <section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title is-3 has-text-centered">Gallery</h2>
+        <div id="results-carousel" class="carousel results-carousel">
+
+          <div class="item">
+            <!-- TODO: Place fig/Motivation.png in static/images/motivation.png -->
+            <img src="static/images/motivation.png"
+                 alt="Motivation: TOIF vs open-loop VLA" loading="lazy">
+            <h2 class="subtitle has-text-centered">
+              Motivation: TOIF closes the open-loop gap in VLA-based humanoid navigation.
+            </h2>
+          </div>
+
+          <div class="item">
+            <!-- TODO: Place fig/system.png in static/images/system.png -->
+            <img src="static/images/system.png"
+                 alt="TOIF three-tier system architecture" loading="lazy">
+            <h2 class="subtitle has-text-centered">
+              Three-tier architecture with bidirectional information flow.
+            </h2>
+          </div>
+
+          <div class="item">
+            <!-- TODO: Place fig/s2_beach.png in static/images/s2_beach.png -->
+            <img src="static/images/s2_beach.png"
+                 alt="S2: Rocky Beach scenario" loading="lazy">
+            <h2 class="subtitle has-text-centered">
+              S2 Rocky Beach: 18&nbsp;m coastal terrain requiring continuous terrain adaptation.
+            </h2>
+          </div>
+
+          <div class="item">
+            <!-- TODO: Place fig/realworld_temporal.png in static/images/realworld_temporal.png -->
+            <img src="static/images/realworld_temporal.png"
+                 alt="Real-world temporal anomaly detection results" loading="lazy">
+            <h2 class="subtitle has-text-centered">
+              Real-world anomaly detection on a physical Unitree&nbsp;G1 across three terrain types.
+            </h2>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ===================== END IMAGE CAROUSEL ===================== -->
+
+
+  <!-- ===================== BIBTEX ===================== -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <div class="bibtex-header">
@@ -480,41 +729,40 @@
           <span class="copy-text">Copy</span>
         </button>
       </div>
-      <pre id="bibtex-code"><code>@article{YourPaperKey2024,
-  title={Your Paper Title Here},
-  author={First Author and Second Author and Third Author},
-  journal={Conference/Journal Name},
-  year={2024},
-  url={https://your-domain.com/your-project-page}
+      <!-- TODO: Update author names, arXiv ID, and URL after review period -->
+      <pre id="bibtex-code"><code>@inproceedings{toif2026,
+  title     = {Thinking on Its Feet: Terrain-Aware Hierarchical Control
+               with Proprioceptive Feedback for Humanoid Navigation},
+  author    = {Anonymous Authors},
+  booktitle = {IEEE/RSJ International Conference on Intelligent Robots
+               and Systems (IROS)},
+  year      = {2026},
+  url       = {https://yuhaiw.github.io/TOIF/}
 }</code></pre>
     </div>
-</section>
-<!--End BibTex citation -->
+  </section>
+  <!-- ===================== END BIBTEX ===================== -->
 
+  </main>
 
   <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This page was built using the
+              <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>,
+              adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+              This website is licensed under a
+              <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">
+              Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
-
-    <!-- End of Statcounter Code -->
-
-  </body>
-  </html>
+</body>
+</html>
