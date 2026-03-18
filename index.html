@@ -617,42 +617,28 @@
           (40&nbsp;cm-height toolboxes), and <strong>slippery terrain</strong> (wooden boards inclined at 30&ndash;45&deg;).
         </p>
 
-        <!-- Real-World Experiment Videos -->
+        <!-- Real-World Experiment Videos carousel -->
         <h3 class="title is-5" style="margin-top:1rem;">Experiment Videos with Live Anomaly Scores</h3>
-        <div class="columns" style="margin-bottom:0.5rem;">
+        <div id="realworld-carousel" class="carousel results-carousel">
 
-          <div class="column has-text-centered">
-            <p style="font-weight:600; margin-bottom:0.5rem;">
-              <span style="display:inline-block; background:#f0f4ff; border-radius:6px; padding:2px 10px;">
-                Uneven Terrain (Rough)
-              </span>
-            </p>
-            <video controls muted loop preload="metadata"
-                   style="width:100%; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.12);">
+          <div class="item item-rough">
+            <video controls muted loop preload="metadata" height="100%">
               <source src="static/images/Rough.mp4" type="video/mp4">
             </video>
-            <p class="figure-caption" style="margin-top:0.5rem;">
-              Unitree&nbsp;G1 traversing uneven terrain (speed bumps).
-              The anomaly detector (AdaBoost, AUC&nbsp;=&nbsp;0.874) outputs live scores;
-              the dashed line marks the F1-optimal threshold (&tau;&nbsp;=&nbsp;&minus;0.250).
-            </p>
+            <h2 class="subtitle has-text-centered">
+              <strong>Uneven Terrain (Rough):</strong> Unitree&nbsp;G1 traversing speed bumps.
+              AdaBoost detector (AUC&nbsp;=&nbsp;0.874), threshold &tau;&nbsp;=&nbsp;&minus;0.250.
+            </h2>
           </div>
 
-          <div class="column has-text-centered">
-            <p style="font-weight:600; margin-bottom:0.5rem;">
-              <span style="display:inline-block; background:#f0f4ff; border-radius:6px; padding:2px 10px;">
-                Stepped Terrain
-              </span>
-            </p>
-            <video controls muted loop preload="metadata"
-                   style="width:100%; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.12);">
+          <div class="item item-step">
+            <video controls muted loop preload="metadata" height="100%">
               <source src="static/images/Step.mp4" type="video/mp4">
             </video>
-            <p class="figure-caption" style="margin-top:0.5rem;">
-              Unitree&nbsp;G1 navigating 40&nbsp;cm-height stepped obstacles.
-              The anomaly detector (XGBoost, AUC&nbsp;=&nbsp;0.942) triggers prompt
-              activation on IMU yaw orientation (&tau;&nbsp;=&nbsp;0.080).
-            </p>
+            <h2 class="subtitle has-text-centered">
+              <strong>Stepped Terrain:</strong> Unitree&nbsp;G1 navigating 40&nbsp;cm-height obstacles.
+              XGBoost detector (AUC&nbsp;=&nbsp;0.942), threshold &tau;&nbsp;=&nbsp;0.080.
+            </h2>
           </div>
 
         </div>
