@@ -617,31 +617,75 @@
           (40&nbsp;cm-height toolboxes), and <strong>slippery terrain</strong> (wooden boards inclined at 30&ndash;45&deg;).
         </p>
 
-        <!-- Real-World Experiment Videos carousel -->
+        <!-- Real-World Experiment Videos: sequential player -->
         <h3 class="title is-5" style="margin-top:1rem;">Experiment Videos with Live Anomaly Scores</h3>
-        <div id="realworld-carousel" class="carousel results-carousel">
 
-          <div class="item item-rough">
-            <video controls muted loop preload="metadata" height="100%">
-              <source src="static/images/Rough.mp4" type="video/mp4">
-            </video>
-            <h2 class="subtitle has-text-centered">
-              <strong>Uneven Terrain (Rough):</strong> Unitree&nbsp;G1 traversing speed bumps.
-              AdaBoost detector (AUC&nbsp;=&nbsp;0.874), threshold &tau;&nbsp;=&nbsp;&minus;0.250.
-            </h2>
+        <div id="rw-player" style="text-align:center;">
+
+          <!-- Tab buttons -->
+          <div style="display:flex; justify-content:center; gap:0.75rem; margin-bottom:1rem;">
+            <button id="rw-btn-0" onclick="rwSwitch(0)"
+              style="padding:0.4rem 1.2rem; border-radius:20px; border:2px solid #2563eb;
+                     background:#2563eb; color:#fff; font-weight:600; cursor:pointer;">
+              Uneven Terrain
+            </button>
+            <button id="rw-btn-1" onclick="rwSwitch(1)"
+              style="padding:0.4rem 1.2rem; border-radius:20px; border:2px solid #2563eb;
+                     background:#fff; color:#2563eb; font-weight:600; cursor:pointer;">
+              Stepped Terrain
+            </button>
           </div>
 
-          <div class="item item-step">
-            <video controls muted loop preload="metadata" height="100%">
-              <source src="static/images/Step.mp4" type="video/mp4">
-            </video>
-            <h2 class="subtitle has-text-centered">
-              <strong>Stepped Terrain:</strong> Unitree&nbsp;G1 navigating 40&nbsp;cm-height obstacles.
-              XGBoost detector (AUC&nbsp;=&nbsp;0.942), threshold &tau;&nbsp;=&nbsp;0.080.
-            </h2>
-          </div>
+          <!-- Video -->
+          <video id="rw-video" controls muted preload="metadata"
+                 style="width:100%; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.12);">
+            <source id="rw-source" src="static/images/Rough.mp4" type="video/mp4">
+          </video>
+
+          <!-- Caption -->
+          <p id="rw-caption" class="figure-caption" style="margin-top:0.75rem; text-align:center;">
+            <strong>Uneven Terrain (Rough):</strong> Unitree&nbsp;G1 traversing speed bumps.
+            AdaBoost detector (AUC&nbsp;=&nbsp;0.874), threshold &tau;&nbsp;=&nbsp;&minus;0.250.
+          </p>
 
         </div>
+
+        <script>
+          var rwVideos = [
+            {
+              src: "static/images/Rough.mp4",
+              caption: "<strong>Uneven Terrain (Rough):</strong> Unitree&nbsp;G1 traversing speed bumps. AdaBoost detector (AUC&nbsp;=&nbsp;0.874), threshold &tau;&nbsp;=&nbsp;&minus;0.250."
+            },
+            {
+              src: "static/images/Step.mp4",
+              caption: "<strong>Stepped Terrain:</strong> Unitree&nbsp;G1 navigating 40&nbsp;cm-height obstacles. XGBoost detector (AUC&nbsp;=&nbsp;0.942), threshold &tau;&nbsp;=&nbsp;0.080."
+            }
+          ];
+          var rwCurrent = 0;
+
+          function rwSwitch(idx) {
+            rwCurrent = idx;
+            var video = document.getElementById("rw-video");
+            document.getElementById("rw-source").src = rwVideos[idx].src;
+            document.getElementById("rw-caption").innerHTML = rwVideos[idx].caption;
+            video.load();
+            video.play();
+            // Update button styles
+            for (var i = 0; i < rwVideos.length; i++) {
+              var btn = document.getElementById("rw-btn-" + i);
+              btn.style.background = i === idx ? "#2563eb" : "#fff";
+              btn.style.color      = i === idx ? "#fff"    : "#2563eb";
+            }
+          }
+
+          // Auto-advance to next video when current one ends
+          document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("rw-video").addEventListener("ended", function () {
+              var next = (rwCurrent + 1) % rwVideos.length;
+              rwSwitch(next);
+            });
+          });
+        </script>
 
         <!-- TODO: Place fig/realworld_temporal.png in static/images/realworld_temporal.png -->
         <div class="figure-block has-text-centered">
