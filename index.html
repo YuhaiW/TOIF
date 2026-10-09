@@ -7,8 +7,8 @@
   <!-- Primary Meta Tags -->
   <meta name="title" content="Thinking on Its Feet: Terrain-Aware Hierarchical Control with Proprioceptive Feedback for Humanoid Navigation">
   <meta name="description" content="TOIF: A three-tier hierarchical control framework that closes the loop between low-level proprioceptive sensing and high-level semantic path planning for terrain-aware humanoid robot navigation.">
-  <meta name="keywords" content="humanoid robot, navigation, VLA, vision-language-action, proprioception, anomaly detection, terrain adaptation, hierarchical control, IROS 2026">
-  <meta name="author" content="Anonymous Authors">
+  <meta name="keywords" content="humanoid robot, navigation, VLA, vision-language-action, proprioception, anomaly detection, terrain adaptation, hierarchical control, Humanoids 2026">
+  <meta name="author" content="Yuhai Wang, Chenghao Wang, Xianyao Li, Zening Teng, Xiao Hu, Rongxuan Zhou, Alireza Ramezani, Jing Du, Yang Ye">
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
 
@@ -39,10 +39,17 @@
 
   <!-- Academic/Research Specific -->
   <meta name="citation_title" content="Thinking on Its Feet: Terrain-Aware Hierarchical Control with Proprioceptive Feedback for Humanoid Navigation">
-  <!-- TODO: Fill in actual author names after review -->
-  <meta name="citation_author" content="Anonymous Authors">
+  <meta name="citation_author" content="Yuhai Wang">
+  <meta name="citation_author" content="Chenghao Wang">
+  <meta name="citation_author" content="Xianyao Li">
+  <meta name="citation_author" content="Zening Teng">
+  <meta name="citation_author" content="Xiao Hu">
+  <meta name="citation_author" content="Rongxuan Zhou">
+  <meta name="citation_author" content="Alireza Ramezani">
+  <meta name="citation_author" content="Jing Du">
+  <meta name="citation_author" content="Yang Ye">
   <meta name="citation_publication_date" content="2026">
-  <meta name="citation_conference_title" content="IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)">
+  <meta name="citation_conference_title" content="IEEE-RAS International Conference on Humanoid Robots (Humanoids)">
   <!-- TODO: Add arXiv PDF link when available -->
   <!-- <meta name="citation_pdf_url" content="https://arxiv.org/pdf/XXXX.XXXXX.pdf"> -->
 
@@ -58,7 +65,7 @@
   <link rel="preconnect" href="https://ajax.googleapis.com">
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
 
-  <title>Thinking on Its Feet (TOIF) | IROS 2026</title>
+  <title>Thinking on Its Feet (TOIF) | Humanoids 2026</title>
 
   <!-- Favicon and App Icons -->
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
@@ -99,7 +106,7 @@
     "datePublished": "2026-01-01",
     "publisher": {
       "@type": "Organization",
-      "name": "IROS 2026"
+      "name": "IEEE-RAS Humanoids 2026"
     },
     "keywords": ["humanoid robot", "navigation", "VLA", "proprioception", "anomaly detection", "terrain adaptation", "hierarchical control"],
     "abstract": "Vision-Language-Action (VLA) models have advanced robotic navigation by unifying perception and planning, yet most systems operate open-loop. We propose Thinking on Its Feet (TOIF), a three-tier hierarchical control framework that closes the loop between low-level proprioceptive sensing and high-level semantic path planning for terrain-aware humanoid robot navigation.",
@@ -199,22 +206,20 @@
             </h1>
 
             <div class="is-size-5 publication-authors">
-              <!-- TODO: Replace with actual author names and links after review period -->
-              <span class="author-block">
-                <a href="#" target="_blank">First Author</a><sup>*</sup>,</span>
-              <span class="author-block">
-                <a href="#" target="_blank">Second Author</a><sup>*</sup>,</span>
-              <span class="author-block">
-                <a href="#" target="_blank">Third Author</a>
-              </span>
+              <span class="author-block">Yuhai Wang<sup>1</sup>,</span>
+              <span class="author-block">Chenghao Wang<sup>1</sup>,</span>
+              <span class="author-block">Xianyao Li<sup>2</sup>,</span>
+              <span class="author-block">Zening Teng<sup>1</sup>,</span>
+              <span class="author-block">Xiao Hu<sup>1</sup>,</span>
+              <span class="author-block">Rongxuan Zhou<sup>1</sup>,</span>
+              <span class="author-block">Alireza Ramezani<sup>1</sup>,</span>
+              <span class="author-block">Jing Du<sup>2</sup>,</span>
+              <span class="author-block">Yang Ye<sup>1</sup></span>
             </div>
 
             <div class="is-size-5 publication-authors">
-              <!-- TODO: Replace with actual institution name after review -->
-              <span class="author-block">Institution Name<br>
-                Submitted to IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2026)
-              </span>
-              <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+              <span class="author-block"><sup>1</sup>Northeastern University,&nbsp;&nbsp;<sup>2</sup>University of Florida</span><br>
+              <span class="author-block">IEEE-RAS International Conference on Humanoid Robots (Humanoids 2026)</span>
             </div>
 
             <div class="column has-text-centered">
@@ -266,7 +271,7 @@
       <div class="hero-body">
         <video autoplay controls muted loop height="100%" preload="metadata"
                style="width:100%; border-radius:8px; box-shadow:0 2px 12px rgba(0,0,0,0.12);">
-          <source src="static/images/TOIF_Video_2.mp4" type="video/mp4">
+          <source src="static/images/TOIF_Video_Humanoids.mp4" type="video/mp4">
         </video>
         <h2 class="subtitle has-text-centered" style="margin-top:1rem;">
           TOIF enables terrain-aware humanoid navigation by closing the loop between
@@ -310,8 +315,8 @@
           <div class="content has-text-justified">
             <p>
               Vision-Language-Action (VLA) models have advanced robotic navigation by unifying perception and planning,
-              yet most systems operate <em>open-loop</em>&mdash;generating plans without awareness and adaptivity to
-              locomotion feasibility and safety. This disconnect leads to cascading failures on challenging terrains and
+              yet most systems operate in an <em>open-loop</em> manner, generating plans without awareness of
+              locomotion feasibility or the ability to adapt when execution becomes unsafe. This disconnect leads to cascading failures on challenging terrains and
               surfaces where pre-planned trajectories become infeasible. We propose <strong>Thinking on Its Feet
               (TOIF)</strong>, a three-tier hierarchical control framework that closes the loop between low-level
               proprioceptive sensing and high-level semantic path planning for terrain-aware humanoid robot navigation.
@@ -320,14 +325,14 @@
               At the low level, an RL locomotion policy is augmented with a multi-detector anomaly system that evaluates
               terrain-specific feasibility and safety constraints using compact proprioceptive features. Detected anomalies
               are accumulated through leaky integrators and translated into structured natural-language feedback, enabling
-              the high-level planner to replan over a semantic scene graph. At the mid level, a vision-language-action
+              the high-level planner to replan over a semantic scene graph. At the mid level, a VLA
               model generates velocity commands that bridge high-level waypoints and low-level execution. We further
-              introduce <strong>risk-aware velocity modulation</strong> that proactively reduces speed based on real-time
+              introduce a <strong>risk-aware velocity modulation</strong> mechanism that proactively reduces speed based on real-time
               anomaly confidence.
             </p>
             <p>
-              We validate TOIF in Isaac Lab simulation and on a physical Unitree&nbsp;G1 humanoid robot across several
-              unsafe or challenging terrains. Results demonstrate that TOIF significantly improves navigation success rate
+              We validate TOIF in Isaac Lab simulation and on a physical humanoid robot across a range of
+              challenging terrains. Results demonstrate that TOIF substantially improves navigation success rate
               and safety over open-loop baselines, and that the proprioceptive anomaly detectors transfer effectively to
               real-world deployment.
             </p>
@@ -390,7 +395,7 @@
             false-positive suppression.
           </li>
           <li>
-            A <strong>multidetector proprioceptive anomaly system</strong> that learns compact, task-specific feature
+            A <strong>multi-detector proprioceptive anomaly system</strong> that learns compact, task-specific feature
             subsets for each terrain type (slippery, uneven, stepped), validated both in Isaac Lab simulation and on a
             real Unitree&nbsp;G1 with different sensor configurations.
           </li>
@@ -406,6 +411,18 @@
     <div class="container is-max-desktop">
       <h2 class="title is-3 has-text-centered">Results</h2>
       <div class="content">
+
+        <!-- Feature Selection -->
+        <h3 class="title is-5">Feature Selection</h3>
+        <div class="content">
+          <p>
+            Using simulation slip detection as a representative case, the full 107D proprioceptive feature set achieves
+            only <strong>AUC&nbsp;=&nbsp;0.66</strong>, because joint-state features introduce noise arising from the
+            compensation dynamics of the RL policy. A compact <strong>11D contact-feature set</strong> (foot forces, air
+            times, projected gravity) achieves <strong>AUC&nbsp;=&nbsp;0.94</strong>, confirming that contact signals
+            encode terrain interaction before policy compensation attenuates the signal.
+          </p>
+        </div>
 
         <!-- Navigation Performance Table -->
         <h3 class="title is-5">Navigation Performance</h3>
@@ -508,7 +525,7 @@
         <!-- Ablation Table -->
         <h3 class="title is-5" style="margin-top:2rem;">Ablation Study</h3>
         <p>
-          Each ablated variant removes exactly one layer of the hierarchical architecture.
+          Each ablated variant removes exactly one module, isolating its marginal contribution to overall system performance.
         </p>
         <div style="overflow-x:auto;">
           <table class="results-table">
@@ -614,7 +631,11 @@
         <p>
           We deploy the anomaly detection component on a physical Unitree&nbsp;G1 and evaluate it across three
           laboratory terrain types: <strong>uneven terrain</strong> (speed bumps), <strong>stepped terrain</strong>
-          (40&nbsp;cm-height toolboxes), and <strong>slippery terrain</strong> (wooden boards inclined at 30&ndash;45&deg;).
+          (40&nbsp;cm-high toolboxes), and <strong>slippery terrain</strong> (wooden boards inclined at 30&ndash;45&deg;).
+          In contrast to simulation, the real-world detectors are trained directly on manually annotated physical robot
+          data, with an 80/20 temporal split to prevent data leakage. Supervised classifiers (AdaBoost, XGBoost)
+          outperform the one-class methods used in simulation, as real-world nominal data exhibits higher variance.
+          We then deploy the <strong>complete three-tier pipeline</strong> on the physical G1 in a laboratory navigation task.
         </p>
 
         <!-- Real-World Experiment Videos: sequential player -->
@@ -658,7 +679,7 @@
             },
             {
               src: "static/images/Step.mp4",
-              caption: "<strong>Stepped Terrain:</strong> Unitree&nbsp;G1 navigating 40&nbsp;cm-height obstacles. XGBoost detector (AUC&nbsp;=&nbsp;0.942), threshold &tau;&nbsp;=&nbsp;0.080."
+              caption: "<strong>Stepped Terrain:</strong> Unitree&nbsp;G1 navigating 40&nbsp;cm-height obstacles. XGBoost detector (AUC&nbsp;=&nbsp;0.942), threshold &tau;&nbsp;=&nbsp;0.040."
             }
           ];
           var rwCurrent = 0;
@@ -696,6 +717,8 @@
             <strong>Figure 3.</strong>
             Real-world anomaly detection on a physical Unitree&nbsp;G1 across three terrain types.
             Each row shows robot snapshots (top) and temporal anomaly scores (bottom).
+            (a)&nbsp;Uneven terrain (&tau;&nbsp;=&nbsp;&minus;0.250); (b)&nbsp;slippery terrain (&tau;&nbsp;=&nbsp;0.080);
+            (c)&nbsp;stepped terrain (&tau;&nbsp;=&nbsp;0.040).
             Bold curves: smoothed scores; light traces: raw output; dashed lines: F1-optimal thresholds.
           </p>
         </div>
@@ -709,7 +732,7 @@
                    style="max-width:80%; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.10);">
               <p class="figure-caption" style="margin-top:0.5rem;">
                 <strong>Figure 4.</strong>
-                ROC curve for the real-world uneven terrain anomaly detector (AdaBoost, AUC&nbsp;=&nbsp;0.874).
+                ROC curves of candidate models for real-world uneven-terrain anomaly detection, trained on physical Unitree&nbsp;G1 data (best: AdaBoost, AUC&nbsp;=&nbsp;0.874).
               </p>
             </div>
           </div>
@@ -721,6 +744,7 @@
                   <th>Model</th>
                   <th>Dim</th>
                   <th>AUC</th>
+                  <th>Key Features</th>
                 </tr>
               </thead>
               <tbody>
@@ -729,23 +753,47 @@
                   <td>AdaBoost</td>
                   <td>4D</td>
                   <td>0.874</td>
+                  <td>torso sway, hip torque</td>
                 </tr>
                 <tr class="ours">
                   <td>Stepped</td>
                   <td>XGBoost</td>
                   <td>1D</td>
                   <td><strong>0.942</strong></td>
+                  <td>IMU yaw orientation</td>
                 </tr>
                 <tr>
-                  <td>Sloped</td>
+                  <td>Slippery</td>
                   <td>LOF</td>
                   <td>4D</td>
                   <td>0.813</td>
+                  <td>ankle pos, trunk incl.</td>
                 </tr>
               </tbody>
             </table>
-            <p class="table-caption">Table 3. Real-world anomaly detectors on Unitree&nbsp;G1.</p>
+            <p class="table-caption">Table 3. Real-world anomaly detectors (Unitree&nbsp;G1).</p>
           </div>
+        </div>
+
+        <h3 class="title is-5" style="margin-top:2rem;">Full-Pipeline Deployment</h3>
+        <p>
+          The robot is instructed to reach an exit sign, while a wooden pallet on a hand truck blocks the direct route.
+          Upon encountering the obstacle, the proprioceptive anomaly detectors trigger replanning, and the planner
+          reroutes the robot along an alternative path to the exit. The robot reached the exit in
+          <strong>3 out of 5 trials</strong>, in line with the simulation success rates (60&ndash;65%); the complete
+          runs are shown in the video at the top of this page.
+        </p>
+        <div class="figure-block has-text-centered">
+          <img src="static/images/realworld_pipeline.png"
+               alt="Full-pipeline deployment of TOIF on a physical Unitree G1"
+               style="max-width:100%; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.10);">
+          <p class="figure-caption" style="margin-top:0.75rem;">
+            <strong>Figure 5.</strong>
+            Full-pipeline deployment on the physical Unitree&nbsp;G1. The robot walks toward the exit sign (1); a wooden
+            pallet blocks the direct route and an anomaly is flagged (2&ndash;3); replanning turns the robot toward the
+            alternative route (4), which it follows to the exit (5&ndash;6). Green/red borders: normal traversal /
+            detection&ndash;replanning phase; yellow/green arrows: initial/replanned route.
+          </p>
         </div>
 
       </div>
@@ -814,16 +862,13 @@
           <span class="copy-text">Copy</span>
         </button>
       </div>
-      <!-- TODO: Update author names, arXiv ID, and URL after review period -->
-      <pre id="bibtex-code"><code>@inproceedings{
-        <!-- toif2026,
+      <pre id="bibtex-code"><code>@inproceedings{toif2026,
   title     = {Thinking on Its Feet: Terrain-Aware Hierarchical Control
                with Proprioceptive Feedback for Humanoid Navigation},
-  author    = {Anonymous Authors},
-  booktitle = {IEEE/RSJ International Conference on Intelligent Robots
-               and Systems (IROS)},
+  author    = {Yuhai Wang and Chenghao Wang and Xianyao Li and Zening Teng and Xiao Hu and Rongxuan Zhou and Alireza Ramezani and Jing Du and Yang Ye},
+  booktitle = {IEEE-RAS International Conference on Humanoid Robots (Humanoids)},
   year      = {2026},
-  url       = {https://yuhaiw.github.io/TOIF/} -->
+  url       = {https://yuhaiw.github.io/TOIF/}
 }</code></pre>
     </div>
   </section>
